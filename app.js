@@ -12,7 +12,7 @@ app.use("/api/blogs", blogRouter);
 
 //configure mongoose
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb+srv://phadnisanandhyd:M41BIvKhzzzelS9W@cluster0.azvp2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  process.env.MONGODB_URI || "mongodb+srv://phadnisanandhyd:M41BIvKhzzzelS9W@cluster0.azvp2.mongodb.net/Cluster0",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
