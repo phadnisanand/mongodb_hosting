@@ -11,7 +11,7 @@ app.use("/api/blogs", blogRouter);
 
 //configure mongoose
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/CRUD",
+  process.env.MONGODB_URI || "mongodb://localhost:27017/CRUD",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -26,7 +26,7 @@ mongoose.connect(
 );
 
 app.listen(3001, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port`);
 });
 
 module.exports = app;
