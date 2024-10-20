@@ -1,9 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const blogRouter = require("./routes/BlogRoutes");
-
 const app = express();
-
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -12,7 +10,7 @@ app.use("/api/blogs", blogRouter);
 
 //configure mongoose
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb+srv://phadnisanandhyd:fgS8rULrr849VoJy@cluster0.azvp2.mongodb.net/Cluster0",
+  process.env.MONGODB_URI || "mongodb://localhost:27017/CRUD",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
